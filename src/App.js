@@ -22,7 +22,7 @@ class SearchWord extends React.Component {
     var texOriginal = chain.toLowerCase();
     var letterSpace = texOriginal.split("");
     var chainWithoutSpace = "";
-    for (i in letterSpace) {
+    for (let i in letterSpace) {
       if (letterSpace[i] !== " ") {
         chainWithoutSpace += letterSpace[i];
       }
@@ -32,7 +32,7 @@ class SearchWord extends React.Component {
     var lettersReverse = chainWithoutSpace.split("").reverse();
     var same = true;
 
-    for (i in letters) {
+    for (let i in letters) {
       if (letters[i] === lettersReverse[i]) {
       } else {
         same = false;
@@ -50,13 +50,13 @@ class SearchWord extends React.Component {
 
   render() {
     return (
-      <body>
-        <header className="hello">
+      <div>
+        <header>
           <h1>Palabras palindromas</h1>
           <form onSubmit={this.handleSubmit}>
             <input
               type="text"
-              class="word"
+              className="word"
               id="text"
               placeholder="Escribe la palabra"
               value={this.state.text}
@@ -74,7 +74,7 @@ class SearchWord extends React.Component {
         <footer>
           <p>&copy; 2020 Luis Ángel Velázquez Palomino</p>
         </footer>
-      </body>
+      </div>
     );
   }
 }
