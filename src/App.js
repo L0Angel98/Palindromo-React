@@ -51,7 +51,7 @@ class SearchWord extends React.Component {
   render() {
     return (
       <div>
-        <header>
+        <section>
           <h1>Palabras palindromas</h1>
           <form onSubmit={this.handleSubmit}>
             <input
@@ -64,16 +64,16 @@ class SearchWord extends React.Component {
             />
             <input id="button" type="submit" value="Revisar" />
           </form>
-        </header>
+        </section>
 
         <section id="answer">
           <h1 id="youWord">{this.state.text}</h1>
           <p id="result">{this.state.result}</p>
         </section>
 
-        <footer>
+        {/*<footer>
           <p>&copy; 2020 Luis Ángel Velázquez Palomino</p>
-        </footer>
+        </footer>*/}
       </div>
     );
   }
