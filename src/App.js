@@ -67,7 +67,7 @@ class SearchWord extends React.Component {
         </header>
 
         <section id="answer">
-          <h1 id="youWord">Tu palabra</h1>
+          <h1 id="youWord">{this.state.text}</h1>
           <p id="result">{this.state.result}</p>
         </section>
 
