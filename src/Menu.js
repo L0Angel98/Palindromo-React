@@ -1,15 +1,11 @@
 //import "./styles.css";
 import React from "react";
-import App from "./App";
+//import App from "./App";
 
 class ListMenu extends React.Component {
-  constructor(props) {
+  /*constructor(props) {
     super(props);
-    this.handleSubmit1 = this.handleSubmit1.bind(this);
-  }
-  handleSubmit1(event) {
-    <App />;
-  }
+  }*/
   render() {
     return (
       <ul>

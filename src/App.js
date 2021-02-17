@@ -1,4 +1,4 @@
-import "./styles.css";
+//import "./styles.css";
 import React from "react";
 
 class SearchWord extends React.Component {
