@@ -96,10 +96,10 @@ class FormData extends React.Component {
             id="button"
             type="submit"
             value="Revisar"
-            onclick={this.handleSubmit}
+            onClick={this.handleSubmit}
           />
         </section>
-        {this.isClick ? (
+        {this.state.isClick ? (
           <section>
             <label>Nombre: {this.state.Nombre} </label>
             <label>Apellido: {this.state.Apellido} </label>
