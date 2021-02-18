@@ -13,7 +13,7 @@ class List extends React.Component {
     const TablaNumer = this.state.number;
     const TablaItem = numeros.map((numero) => (
       <li key={numero}>
-        {numero} x {TablaNumer} = {TablaNumer * numero}
+        {TablaNumer} x {numero} = {TablaNumer * numero}
       </li>
     ));
     return <ul>{TablaItem}</ul>;
