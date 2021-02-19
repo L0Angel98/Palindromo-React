@@ -1,4 +1,4 @@
-//import "./styles.css";
+import "./stylesFormulario.css";
 import React from "react";
 
 class FormData extends React.Component {
@@ -29,10 +29,10 @@ class FormData extends React.Component {
 
   render() {
     return (
-      <div className="main">
-        <section>
+      <div className="mainFormulario">
+        <section className="Formulario">
           <h1>Formulario</h1>
-          <label>
+          <label className="Nombre">
             {" "}
             Nombre:
             <input
@@ -44,7 +44,7 @@ class FormData extends React.Component {
               onChange={this.handleChange}
             />
           </label>
-          <label>
+          <label className="Apellido">
             {" "}
             Apellido:
             <input
@@ -56,7 +56,7 @@ class FormData extends React.Component {
               onChange={this.handleChange}
             />
           </label>
-          <label>
+          <label className="Estado">
             {" "}
             Estado:
             <input
@@ -68,7 +68,7 @@ class FormData extends React.Component {
               onChange={this.handleChange}
             />
           </label>
-          <label>
+          <label className="Ciudad">
             {" "}
             Ciudad:
             <input
@@ -80,7 +80,7 @@ class FormData extends React.Component {
               onChange={this.handleChange}
             />
           </label>
-          <label>
+          <label className="Numero">
             {" "}
             Número:
             <input
@@ -100,12 +100,22 @@ class FormData extends React.Component {
           />
         </section>
         {this.state.isClick ? (
-          <section>
-            <label>Nombre: {this.state.Nombre} </label>
-            <label>Apellido: {this.state.Apellido} </label>
-            <label>Estado: {this.state.Estado} </label>
-            <label>Ciudad: {this.state.Ciudad} </label>
-            <label>Número: {this.state.Numero} </label>
+          <section className="datos">
+            <label>
+              <b>Nombre:</b> {this.state.Nombre}{" "}
+            </label>
+            <label>
+              <b>Apellido:</b> {this.state.Apellido}{" "}
+            </label>
+            <label>
+              <b>Estado:</b> {this.state.Estado}{" "}
+            </label>
+            <label>
+              <b>Ciudad:</b> {this.state.Ciudad}{" "}
+            </label>
+            <label>
+              <b>Número:</b> {this.state.Numero}{" "}
+            </label>
           </section>
         ) : (
           ""

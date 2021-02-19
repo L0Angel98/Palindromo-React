@@ -16,7 +16,7 @@ div.mainTablas div.FlexTablas {
   grid-row: 2 / 3;
   display: flex;
   flex-wrap: wrap;
-  margin: 3em;
+  margin: 2em;
   justify-content: center;
   align-content: center;
 }
