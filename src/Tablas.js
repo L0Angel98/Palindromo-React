@@ -25,11 +25,14 @@ class Tablas extends React.Component {
     let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
     const TotalTablas = numeros.map((numero) => (
       <div key={numero}>
-        <h1>Tablas</h1>
         <List number={numero} />
       </div>
     ));
-    return <div>{TotalTablas}</div>;
+    return (
+      <div>
+        <h1>Tablas</h1> {TotalTablas}
+      </div>
+    );
   }
 }
 
