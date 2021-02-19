@@ -1,4 +1,4 @@
-//import "./styles.css";
+import "./styles.css";
 import React from "react";
 import App from "./App";
 import Tablas from "./Tablas";
@@ -23,18 +23,20 @@ class ListMenu extends React.Component {
   }
   render() {
     return (
-      <div>
-        <ul>
-          <li>
-            <button onClick={this.handlesApp}>Palindromo</button>
-          </li>
-          <li>
-            <button onClick={this.handlesTablas}>Tablas</button>
-          </li>
-          <li>
-            <button onClick={this.hanlesFormulario}>Formulario</button>
-          </li>
-        </ul>
+      <div id="MainMenu">
+        <header>
+          <ul>
+            <li>
+              <button onClick={this.handlesApp}>Palindromo</button>
+            </li>
+            <li>
+              <button onClick={this.handlesTablas}>Tablas</button>
+            </li>
+            <li>
+              <button onClick={this.hanlesFormulario}>Formulario</button>
+            </li>
+          </ul>
+        </header>
 
         {this.state.App ? (
           <App />
@@ -45,7 +47,9 @@ class ListMenu extends React.Component {
         ) : (
           <App />
         )}
-        <footer>Footer</footer>
+        <footer>
+          <p>&copy; 2020 Luis Ángel Velázquez Palomino</p>
+        </footer>
       </div>
     );
   }

@@ -1,0 +1,60 @@
+div .main input {
+  position: relative;
+  padding: 0.3em;
+  margin: 1em;
+  outline: none;
+  background-color: white;
+  border: 0;
+}
+
+div .main input.word {
+  border-radius: 17px;
+  padding: 0.6em;
+  width: 40vw;
+}
+div .main h1 {
+  position: relative;
+}
+div .main input#button {
+  margin: 0.7em;
+  border-radius: 10px;
+  padding: 0.7em;
+  font-weight: bold;
+}
+div .main section#search::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+div .main section#search {
+  color: white;
+  text-align: center;
+  padding: 2.5em;
+  grid-row: 1 / 2;
+  background-image: url("https://neetwork.com/wp-content/uploads/2021/01/La_Jungla_349227278_103600492_1024x576.jpg");
+  background-repeat: no-repeat;
+  background-position: center, center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  position: relative;
+}
+div .main section#answer {
+  border: 1vw solid black;
+  margin: 0.7em;
+  padding: 0.4em;
+  text-align: center;
+  vertical-align: center;
+  font-size: 4vw;
+}
+div .main section#answer h1,
+p {
+  padding: 0.2em;
+}

@@ -1,0 +1,31 @@
+div.mainTablas {
+  display: grid;
+  grid-template-rows: 1em auto;
+}
+
+div.mainTablas h1 {
+  grid-row: 1 / 2;
+  padding: 0.5em;
+}
+
+div.mainTablas div ul {
+  list-style: none;
+}
+
+div.mainTablas div.FlexTablas {
+  grid-row: 2 / 3;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 3em;
+  justify-content: center;
+  align-content: center;
+}
+
+div.mainTablas div.FlexTablas div {
+  width: 6.1em;
+  padding: 1em;
+  margin: 1em;
+  text-align: left;
+  font-size: 1.3em;
+  border: 5px solid black;
+}

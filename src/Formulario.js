@@ -29,7 +29,7 @@ class FormData extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className="main">
         <section>
           <h1>Formulario</h1>
           <label>

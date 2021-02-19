@@ -1,4 +1,4 @@
-//import "./styles.css";
+import "./stylesApp.css";
 import React from "react";
 
 class SearchWord extends React.Component {
@@ -50,8 +50,8 @@ class SearchWord extends React.Component {
 
   render() {
     return (
-      <div>
-        <section>
+      <div className="main">
+        <section id="search">
           <h1>Palabras palindromas</h1>
           <form onSubmit={this.handleSubmit}>
             <input
@@ -70,10 +70,6 @@ class SearchWord extends React.Component {
           <h1 id="youWord">{this.state.text}</h1>
           <p id="result">{this.state.result}</p>
         </section>
-
-        {/*<footer>
-          <p>&copy; 2020 Luis Ángel Velázquez Palomino</p>
-        </footer>*/}
       </div>
     );
   }

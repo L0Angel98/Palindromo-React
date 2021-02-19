@@ -1,4 +1,4 @@
-.App {
+body {
   font-family: sans-serif;
   text-align: center;
 }
@@ -8,7 +8,7 @@
   padding: 0;
 }
 
-body div {
+body div #MainMenu {
   display: grid;
   grid-template-rows: auto 1fr auto;
   position: absolute;
@@ -18,79 +18,47 @@ body div {
   bottom: 0;
 }
 
-header:before {
-  content: "";
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-
 header {
-  background-color: black;
-  color: white;
-  text-align: center;
-  padding: 2em;
   grid-row: 1 / 2;
-  background-image: url("https://neetwork.com/wp-content/uploads/2021/01/La_Jungla_349227278_103600492_1024x576.jpg");
-  background-repeat: no-repeat;
-  background-position: center, center;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  position: relative;
+  height: 3em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: lightblue;
 }
 
-header #button {
+header ul {
+  display: flex;
+  list-style: none;
+}
+
+header ul button {
+  width: auto;
+  height: 2em;
   margin: 0.7em;
-  border-radius: 10px;
-  padding: 0.7em;
+  background: none;
   border: none;
-  font-weight: bold;
-}
-
-header .word {
-  border-radius: 17px;
-  border: 1px solid white;
-  padding: 0.6em;
-  width: 40vw;
-}
-
-header input {
-  position: relative;
-  padding: 0.3em;
-  margin: 1em;
   outline: none;
-  background-color: white;
-  border: 0;
+  font-weight: bold;
+  font-size: 1em;
 }
 
-header h1 {
-  position: relative;
+header ul button:hover {
+  text-shadow: 0.1em 0.1em 0.5em black;
+  cursor: pointer;
 }
 
-section {
+.main {
   grid-row: 2 / 3;
-  border: 1vw solid black;
-  margin: 0.5em;
-  padding: 0.5em;
-  text-align: center;
-  vertical-align: center;
-  font-size: 5vw;
 }
-
-section p {
-  padding-top: 0.7em;
+.main h1 {
+  padding: 0.7em;
 }
-
 footer {
-  background-color: black;
-  color: white;
-  padding: 2em;
-  text-align: center;
   grid-row: 3 / 4;
+  height: 3em;
+  background-color: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

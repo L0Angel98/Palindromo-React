@@ -1,3 +1,4 @@
+import "./stylesTablas.css";
 import React from "react";
 
 class List extends React.Component {
@@ -29,8 +30,9 @@ class Tablas extends React.Component {
       </div>
     ));
     return (
-      <div>
-        <h1>Tablas</h1> {TotalTablas}
+      <div className="mainTablas">
+        <h1>Tablas</h1>
+        <div className="FlexTablas">{TotalTablas}</div>
       </div>
     );
   }
