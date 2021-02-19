@@ -95,7 +95,7 @@ class FormData extends React.Component {
           <input
             id="button"
             type="submit"
-            value="Revisar"
+            value="Enviar"
             onClick={this.handleSubmit}
           />
         </section>
