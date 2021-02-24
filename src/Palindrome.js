@@ -1,7 +1,7 @@
-import "./stylesApp.css";
+import "./stylesCheckWord.css";
 import React from "react";
 
-class SearchWord extends React.Component {
+class CheckWord extends React.Component {
   constructor(props) {
     super(props);
     this.state = { text: "", result: "" };
@@ -16,34 +16,33 @@ class SearchWord extends React.Component {
     const removeAccents = (str) => {
       return str.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
     };
-    var tex = this.state.text;
-    var word;
-    var chain = removeAccents(tex);
-    var texOriginal = chain.toLowerCase();
-    var letterSpace = texOriginal.split("");
-    var chainWithoutSpace = "";
+
+    let tex = this.state.text,
+      word,
+      chain = removeAccents(tex),
+      texOriginal = chain.toLowerCase(),
+      letterSpace = texOriginal.split(""),
+      chainWithoutSpace = "";
+
     for (let i in letterSpace) {
       if (letterSpace[i] !== " ") {
         chainWithoutSpace += letterSpace[i];
       }
     }
 
-    var letters = chainWithoutSpace.split("");
-    var lettersReverse = chainWithoutSpace.split("").reverse();
-    var same = true;
+    let letters = chainWithoutSpace.split("");
+    let lettersReverse = chainWithoutSpace.split("").reverse();
+    let same = true;
 
     for (let i in letters) {
-      if (letters[i] === lettersReverse[i]) {
-      } else {
+      let equalLetter = !(letters[i] === lettersReverse[i]);
+      if (equalLetter) {
         same = false;
       }
     }
 
-    if (same) {
-      word = " es un palíndromo";
-    } else {
-      word = " no es un palíndromo";
-    }
+    same ? (word = " es un palíndromo") : (word = " no es un palíndromo");
+
     this.setState({ text: this.state.text, result: word });
     event.preventDefault();
   }
@@ -51,13 +50,12 @@ class SearchWord extends React.Component {
   render() {
     return (
       <div className="main">
-        <section id="search">
+        <section id="check">
           <h1>Palabras palindromas</h1>
           <form onSubmit={this.handleSubmit}>
             <input
               type="text"
               className="word"
-              id="text"
               placeholder="Escribe la palabra"
               value={this.state.text}
               onChange={this.handleChange}
@@ -75,6 +73,6 @@ class SearchWord extends React.Component {
   }
 }
 
-export default function App() {
-  return <SearchWord />;
+export default function palindrome() {
+  return <CheckWord />;
 }

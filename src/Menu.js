@@ -1,52 +1,87 @@
 import "./styles.css";
 import React from "react";
-import App from "./App";
-import Tablas from "./Tablas";
-import Formulario from "./Formulario";
+import Palindrome from "./Palindrome";
+import Tables from "./Tables";
+import Form from "./Form";
+
+const Mmenu = () => {
+  return (
+    <header>
+      <ul>
+        <li>
+          <button onClick={this.handlesPalindrome}>Palindromo</button>
+        </li>
+        <li>
+          <button onClick={this.handlesTables}>Tablas</button>
+        </li>
+        <li>
+          <button onClick={this.hanlesForm}>Formulario</button>
+        </li>
+      </ul>
+    </header>
+  );
+};
 
 class ListMenu extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { App: true, Tablas: false, Formulario: false };
-    this.handlesApp = this.handlesApp.bind(this);
-    this.handlesTablas = this.handlesTablas.bind(this);
-    this.hanlesFormulario = this.hanlesFormulario.bind(this);
+    this.state = {
+      Palindrome: true,
+      Tables: false,
+      Form: false,
+      component: <Palindrome />
+    };
+    // this.handlesPalindrome = this.handlesPalindrome.bind(this);
+    // this.handlesTables = this.handlesTables.bind(this);
+    // this.hanlesForm = this.hanlesForm.bind(this);
+    this.handleChangeComponent = this.handleChangeComponent.bind(this);
   }
-  handlesApp(event) {
-    this.setState({ App: true, Tablas: false, Formulario: false });
+  // handlesPalindrome() {
+  //   this.setState({ Palindrome: true, Tables: false, Form: false });
+  // }
+  // handlesTables() {
+  //   this.setState({ Palindrome: false, Tables: true, Form: false });
+  // }
+  // hanlesForm() {
+  //   this.setState({ Palindrome: false, Tables: false, Form: true });
+  // }
+
+  handleChangeComponent(e) {
+    const { id } = e.target;
+    let comp = "";
+    if (id === "pal") comp = <Palindrome />;
+    else if (id === "tabs") comp = <Tables />;
+    else comp = <Form />;
+
+    this.setState({ component: comp });
   }
-  handlesTablas(event) {
-    this.setState({ App: false, Tablas: true, Formulario: false });
-  }
-  hanlesFormulario(event) {
-    this.setState({ App: false, Tablas: false, Formulario: true });
-  }
+
   render() {
     return (
       <div id="MainMenu">
+        {/* <Mmenu /> */}
         <header>
           <ul>
             <li>
-              <button onClick={this.handlesApp}>Palindromo</button>
+              <button onClick={this.handleChangeComponent} id="pal">
+                Palindromo
+              </button>
             </li>
             <li>
-              <button onClick={this.handlesTablas}>Tablas</button>
+              <button onClick={this.handleChangeComponent} id="tabs">
+                Tablas
+              </button>
             </li>
             <li>
-              <button onClick={this.hanlesFormulario}>Formulario</button>
+              <button onClick={this.handleChangeComponent} id="form">
+                Formulario
+              </button>
             </li>
           </ul>
         </header>
 
-        {this.state.App ? (
-          <App />
-        ) : this.state.Tablas ? (
-          <Tablas />
-        ) : this.state.Formulario ? (
-          <Formulario />
-        ) : (
-          <App />
-        )}
+        {this.state.component}
+
         <footer>
           <p>&copy; 2020 Luis Ángel Velázquez Palomino</p>
         </footer>
@@ -58,3 +93,4 @@ class ListMenu extends React.Component {
 export default function Menu() {
   return <ListMenu />;
 }
+// export default Menu

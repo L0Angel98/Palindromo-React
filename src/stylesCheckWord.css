@@ -21,7 +21,7 @@ div .main input#button {
   padding: 0.7em;
   font-weight: bold;
 }
-div .main section#search::before {
+div .main section#check::before {
   content: "";
   position: absolute;
   top: 0;
@@ -31,7 +31,7 @@ div .main section#search::before {
   background-color: rgba(0, 0, 0, 0.4);
 }
 
-div .main section#search {
+div .main section#check {
   color: white;
   text-align: center;
   padding: 2.5em;

@@ -1,18 +1,18 @@
-div.mainTablas {
+div.mainTables {
   display: grid;
   grid-template-rows: 1em auto;
 }
 
-div.mainTablas h1 {
+div.mainTables h1 {
   grid-row: 1 / 2;
   padding: 0.5em;
 }
 
-div.mainTablas div ul {
+div.mainTables div ul {
   list-style: none;
 }
 
-div.mainTablas div.FlexTablas {
+div.mainTables div.FlexTables {
   grid-row: 2 / 3;
   display: flex;
   flex-wrap: wrap;
@@ -21,7 +21,7 @@ div.mainTablas div.FlexTablas {
   align-content: center;
 }
 
-div.mainTablas div.FlexTablas div {
+div.mainTables div.FlexTables div {
   width: 6.1em;
   padding: 1em;
   margin: 1em;

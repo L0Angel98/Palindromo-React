@@ -1,10 +1,7 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom";
 
-//import App from "./App";
 import Menu from "./Menu";
-//import Tablas from "./Tablas";
-//import Formulario from "./Formulario";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
@@ -13,3 +10,19 @@ ReactDOM.render(
   </StrictMode>,
   rootElement
 );
+
+/*
+
+ src
+  Forms
+    Forms.js
+    Forms.css
+    Forms.test.js
+    Imeges
+      Images.js
+      Images.css
+  Menu
+    Menu.js
+    Menu.css
+
+*/
