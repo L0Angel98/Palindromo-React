@@ -3,6 +3,7 @@ import Palindrome from "./Palindrome/Palindrome";
 import Tables from "./Tables/Tables";
 import Form from "./Form/Form";
 import Menu from "./Menu/Menu";
+import Footer from "./Footer/Footer";
 
 class ListMenu extends React.Component {
   constructor(props) {
@@ -31,9 +32,7 @@ class ListMenu extends React.Component {
       <div id="MainMenu">
         <Menu changeComponent={this.handleChangeComponent} />
         {this.state.component}
-        <footer>
-          <p>&copy; 2020 Luis Ángel Velázquez Palomino</p>
-        </footer>
+        <Footer />
       </div>
     );
   }

@@ -17,12 +17,3 @@ body div #MainMenu {
   right: 0;
   bottom: 0;
 }
-
-footer {
-  grid-row: 3 / 4;
-  height: 3em;
-  background-color: lightblue;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
