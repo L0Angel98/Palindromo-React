@@ -1,4 +1,4 @@
-import "./stylesForm.css";
+import "./Form.css";
 import React from "react";
 
 const Input = ({ styleName, name, placeholderValue, handleChange, value }) => {
@@ -38,6 +38,7 @@ const Output = ({ name, lastName, country, city, phoneNumber }) => {
     </section>
   );
 };
+
 class FormData extends React.Component {
   constructor(props) {
     super(props);
@@ -112,6 +113,7 @@ class FormData extends React.Component {
             onClick={this.handleSubmit}
           />
         </section>
+
         {this.state.isClick ? (
           <Output
             name={this.state.name}
@@ -121,7 +123,7 @@ class FormData extends React.Component {
             phoneNumber={this.state.phoneNumber}
           />
         ) : (
-          <h1 />
+          " "
         )}
       </div>
     );

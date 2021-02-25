@@ -73,6 +73,4 @@ class CheckWord extends React.Component {
   }
 }
 
-export default function palindrome() {
-  return <CheckWord />;
-}
+export default CheckWord;

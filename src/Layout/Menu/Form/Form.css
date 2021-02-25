@@ -39,7 +39,7 @@ div.MainForm section.Form label.City {
   padding: 1em;
 }
 
-div.MainForm section.Form label.PhoneNumer {
+div.MainForm section.Form label.PhoneNumber {
   grid-column: 1 / 2;
   grid-row: 4/ 5;
   text-align: left;

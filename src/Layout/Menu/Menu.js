@@ -1,8 +1,8 @@
 import "./styles.css";
 import React from "react";
-import Palindrome from "./Palindrome";
-import Tables from "./Tables";
-import Form from "./Form";
+import Palindrome from "./Palindrome/Palindrome";
+import Tables from "./Tables/Tables";
+import Form from "./Form/Form";
 
 const Mmenu = () => {
   return (

@@ -1,7 +1,7 @@
 import { StrictMode } from "react";
 import ReactDOM from "react-dom";
 
-import Menu from "./Menu";
+import Menu from "./Layout/Menu/Menu";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
