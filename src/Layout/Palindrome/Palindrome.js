@@ -1,4 +1,4 @@
-import "./stylesCheckWord.css";
+import "./Palindrome.css";
 import React from "react";
 
 class CheckWord extends React.Component {

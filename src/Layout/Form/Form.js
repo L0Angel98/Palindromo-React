@@ -130,6 +130,4 @@ class FormData extends React.Component {
   }
 }
 
-export default function App() {
-  return <FormData />;
-}
+export default FormData;

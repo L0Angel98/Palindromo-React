@@ -1,4 +1,4 @@
-import "./stylesTables.css";
+import "./Tables.css";
 import React from "react";
 
 class Table extends React.Component {
@@ -17,24 +17,9 @@ class Table extends React.Component {
     );
   }
 }
-
-// class Tables extends React.Component {
-//   render() {
-
-//     return (
-
-//     );
-//   }
-// }
-
 const Tables = () => {
-  // const TABLES_NUMER = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-  // const ALL_TABLES = TABLES_NUMER.map((numerTable) => (
-  //   <Table number={numerTable} key={`contaienr_${numerTable}`} />
-  // ));
-  const allTable = (table) => {
+  const allTable = () => {
     const TABLES_NUMER = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-
     return TABLES_NUMER.map((numerTable) => (
       <Table number={numerTable} key={`contaienr_${numerTable}`} />
     ));
@@ -43,12 +28,9 @@ const Tables = () => {
   return (
     <div className="mainTables">
       <h1>Tablas</h1>
-      <input value="2" />
-      <div className="FlexTables">{allTable(2)}</div>
+      <div className="FlexTables">{allTable()}</div>
     </div>
   );
 };
 
-export default function Tabla() {
-  return <Tables />;
-}
+export default Tables;

@@ -1,28 +1,13 @@
 import { StrictMode } from "react";
+import "./Index.css";
 import ReactDOM from "react-dom";
 
-import Menu from "./Layout/Menu/Menu";
+import Layout from "./Layout/Layout";
 
 const rootElement = document.getElementById("root");
 ReactDOM.render(
   <StrictMode>
-    <Menu />
+    <Layout />
   </StrictMode>,
   rootElement
 );
-
-/*
-
- src
-  Forms
-    Forms.js
-    Forms.css
-    Forms.test.js
-    Imeges
-      Images.js
-      Images.css
-  Menu
-    Menu.js
-    Menu.css
-
-*/

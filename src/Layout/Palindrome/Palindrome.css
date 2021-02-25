@@ -58,3 +58,9 @@ div .main section#answer h1,
 p {
   padding: 0.2em;
 }
+.main {
+  grid-row: 2 / 3;
+}
+.main h1 {
+  padding: 0.7em;
+}
