@@ -26,4 +26,3 @@ const Menu = ({ changeComponent }) => {
 };
 
 export default Menu;
-// export default Menu
