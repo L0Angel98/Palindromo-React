@@ -20,6 +20,11 @@ const Menu = ({ changeComponent }) => {
             Formulario
           </button>
         </li>
+        <li>
+          <button onClick={changeComponent} id="star">
+            Star Wars
+          </button>
+        </li>
       </ul>
     </header>
   );
