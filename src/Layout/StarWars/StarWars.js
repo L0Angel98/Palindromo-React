@@ -3,6 +3,9 @@ import React from "react";
 import ListFilms from "./ListFilms/ListFilms";
 import Film from "./Film/Film";
 
+const Back = ({ show, returnComponent }) => {
+  return show !== 0 ? <button onClick={returnComponent}> Atrás </button> : "";
+};
 class StarWars extends React.Component {
   constructor(props) {
     super(props);
@@ -11,8 +14,11 @@ class StarWars extends React.Component {
       isLoaded: false,
       items: [],
       dataFilm: "",
-      returnListFilms: false
+      returnListFilms: false,
+      showList: 0
     };
+    this.handleChangeData = this.handleChangeData.bind(this);
+    this.handleReturnComponent = this.handleReturnComponent.bind(this);
   }
 
   componentDidMount() {
@@ -36,14 +42,22 @@ class StarWars extends React.Component {
   }
 
   handleChangeData(e) {
-    /* const { id } = e.target;
-    //const { items } = this.state;
-    //const FILM_DATA = items[id];
-    this.setState({ dataFilm: id });*/
+    const { id } = e.target;
+    const FILM_DATA = this.state.items[id];
+    this.setState({ dataFilm: <Film film={FILM_DATA} />, showList: 1 });
+  }
+
+  handleReturnComponent() {
+    let numberComponent = 0;
+    let change = this.state.showList > 0;
+    if (change) {
+      numberComponent = this.state.showList - 1;
+    }
+    this.setState({ showList: numberComponent });
   }
 
   render() {
-    const { error, isLoaded, items, dataFilm } = this.state;
+    const { error, isLoaded, items, dataFilm, showList } = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
@@ -51,8 +65,14 @@ class StarWars extends React.Component {
     } else {
       return (
         <div>
-          <ListFilms films={items} changeComponent={this.handleChangeData} />
-          {dataFilm}
+          {showList === 0 ? (
+            <ListFilms films={items} changeComponent={this.handleChangeData} />
+          ) : showList === 1 ? (
+            dataFilm
+          ) : (
+            " "
+          )}
+          <Back show={showList} returnComponent={this.handleReturnComponent} />
         </div>
       );
     }
