@@ -1,13 +1,17 @@
-import CharacterName from "../CharactersName/CharacterName";
+import CharacterName from "../CharactersName/CharactersName";
 
 const CharacterList = ({ characters, characterData }) => {
-  return characters.map((Character) => (
-    <li key={characters.indexOf(Character)}>
-      <button id={characters.indexOf(Character)} onClick={characterData}>
-        <CharacterName ipName={Character} />
-      </button>
-    </li>
-  ));
+  return (
+    <ul>
+      {characters.map((Character) => (
+        <li key={characters.indexOf(Character)}>
+          <button onClick={characterData} id={characters.indexOf(Character)}>
+            <CharacterName ipName={Character} />
+          </button>
+        </li>
+      ))}
+    </ul>
+  );
 };
 
 export default CharacterList;

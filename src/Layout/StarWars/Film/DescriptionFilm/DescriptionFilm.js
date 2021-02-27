@@ -18,9 +18,7 @@ const DescriptionFilm = ({
       <h1>Producer</h1>
       <p>{producer}</p>
       <h1>Characters</h1>
-      <ul>
-        <CharacterList characters={characters} characterData={characterData} />
-      </ul>
+      <CharacterList characters={characters} characterData={characterData} />
     </div>
   );
 };

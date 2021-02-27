@@ -14,7 +14,7 @@ class CharactersName extends React.Component {
     let ipName = this.props.ipName;
     let NewName = "";
     for (let i in ipName) {
-      if (i == 4) {
+      if (Number(i) === 4) {
         NewName += "s";
         NewName += ipName[i];
       } else {
@@ -38,6 +38,13 @@ class CharactersName extends React.Component {
           });
         }
       );
+  }
+  componentWillUnmount() {
+    this.setState({
+      error: null,
+      isLoaded: false,
+      name: ""
+    });
   }
 
   render() {
