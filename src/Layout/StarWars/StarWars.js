@@ -2,6 +2,7 @@ import React from "react";
 
 import ListFilms from "./ListFilms/ListFilms";
 import Film from "./Film/Film";
+//import Character from "./Character/Character";
 
 const Back = ({ show, returnComponent }) => {
   return show !== 0 ? <button onClick={returnComponent}> Atrás </button> : "";
@@ -14,11 +15,13 @@ class StarWars extends React.Component {
       isLoaded: false,
       items: [],
       dataFilm: "",
-      returnListFilms: false,
-      showList: 0
+      showList: 0,
+      selectFilm: [],
+      dataCharacter: ""
     };
     this.handleChangeData = this.handleChangeData.bind(this);
     this.handleReturnComponent = this.handleReturnComponent.bind(this);
+    this.handleDataCharacter = this.handleDataCharacter.bind(this);
   }
 
   componentDidMount() {
@@ -41,10 +44,37 @@ class StarWars extends React.Component {
       );
   }
 
+  componentWillUnmount() {
+    this.setState({
+      error: null,
+      isLoaded: false,
+      items: [],
+      dataFilm: "",
+      showList: 0,
+      selectFilm: [],
+      dataCharacter: ""
+    });
+  }
+
   handleChangeData(e) {
     const { id } = e.target;
     const FILM_DATA = this.state.items[id];
-    this.setState({ dataFilm: <Film film={FILM_DATA} />, showList: 1 });
+    this.setState({
+      dataFilm: (
+        <Film film={FILM_DATA} characterData={this.handleDataCharacter} />
+      ),
+      showList: 1,
+      selectFilm: FILM_DATA
+    });
+  }
+
+  handleDataCharacter(e) {
+    const number = e.target.id;
+    //const { selectFilm } = this.state;
+    this.setState({
+      dataCharacter: number,
+      showList: 2
+    });
   }
 
   handleReturnComponent() {
@@ -57,7 +87,14 @@ class StarWars extends React.Component {
   }
 
   render() {
-    const { error, isLoaded, items, dataFilm, showList } = this.state;
+    const {
+      error,
+      isLoaded,
+      items,
+      dataFilm,
+      showList,
+      dataCharacter
+    } = this.state;
     if (error) {
       return <div>Error: {error.message}</div>;
     } else if (!isLoaded) {
@@ -70,7 +107,7 @@ class StarWars extends React.Component {
           ) : showList === 1 ? (
             dataFilm
           ) : (
-            " "
+            dataCharacter
           )}
           <Back show={showList} returnComponent={this.handleReturnComponent} />
         </div>
