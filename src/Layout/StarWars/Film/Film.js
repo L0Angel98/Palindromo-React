@@ -7,7 +7,7 @@ const Film = ({ film, characterData }) => {
   return (
     <DescriptionFilm
       title={ONE_FILM.title}
-      Opening={ONE_FILM.opening_crawl}
+      opening={ONE_FILM.opening_crawl}
       director={ONE_FILM.director}
       producer={ONE_FILM.producer}
       characters={ONE_FILM.characters}
